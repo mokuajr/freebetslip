@@ -1,0 +1,14 @@
+.pricecontainer-fluid {
+  display: flex;
+  max-width: 300;
+  background-color: none;
+  overflow-x: scroll;
+  scroll-behavior: none;
+  border: 3px solid lightskyblue;
+  background-color: rgb(6, 77, 87);
+}
+.pricerow {
+  display: flex;
+  flex-direction: row;
+  max-width: 300px;
+}

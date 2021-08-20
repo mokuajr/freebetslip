@@ -1,0 +1,256 @@
+/*  */
+/*  */
+/* mobile vertions */
+@media screen and (max-width: 768px) {
+  /* landing page */
+  .free {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .freetip {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .adverts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* desktops  */
+* {
+  margin: 5px;
+}
+
+/* landing page */
+.free {
+  display: flex;
+  justify-content: center;
+}
+.freetip {
+  display: flex;
+  flex-direction: column;
+  flex: 0.6;
+  
+}
+.adverts {
+  display: flex;
+  flex-direction: column;
+  flex: 0.3;
+   
+}
+
+/* conatcts page */
+.contacts {
+  border: none;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+.contact_us {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid lightslategray;
+  margin: 20px;
+  padding: 20px;
+}
+
+.names > input {
+  padding: 5px;
+  size: 30px;
+  font-size: 18px;
+  /* max-width: 500px; */
+  /* min-width: 250px; */
+  justify-content: center;
+  align-items: center;
+}
+.contacts > button {
+  padding: 5px;
+  size: 30px;
+  font-size: 18px;
+  border: 2px solid lightslategray;
+  color: aliceblue;
+  background-color: rgb(7, 63, 60);
+  margin: 10px;
+  border-radius: 12px;
+  padding: 5px;
+}
+.message {
+  border: 1px solid lightgray;
+}
+
+/* signin page */
+.btnsignin {
+  background-color: #d3d3d3;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.login {
+  position: relative;
+  height: auto;
+  width: auto;
+  margin: auto;
+  padding: 60px 60px;
+  /* background: url(https://picsum.photos/id/1004/5616/3744) no-repeat   center center #505050;    */
+  background-size: cover;
+  background-color: transparent;
+  box-shadow: 0px 30px 60px -5px #000;
+}
+
+.signform {
+  padding-top: 80px;
+}
+
+.active {
+  border-bottom: 2px solid #1161ed;
+}
+
+.nonactive {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+h2 {
+  padding-left: 12px;
+  font-size: 22px;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+  letter-spacing: 2px;
+  display: inline-block;
+  font-weight: 100;
+}
+
+h2:first-child {
+  padding-left: 0px;
+}
+
+.signspan {
+  text-transform: uppercase;
+  font-size: 12px;
+  opacity: 0.4;
+  display: inline-block;
+  position: relative;
+  top: -65px;
+  transition: all 0.5s ease-in-out;
+}
+
+.signtext {
+  border: none;
+  width: 89%;
+  padding: 10px 20px;
+  display: block;
+  height: 15px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0);
+  overflow: hidden;
+  margin-top: 15px;
+  transition: all 0.5s ease-in-out;
+}
+
+.signtext:focus {
+  outline: 0;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0);
+}
+
+.text:focus + span {
+  opacity: 0.6;
+}
+
+input[type="text"],
+input[type="password"] {
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+}
+
+input {
+  display: inline-block;
+  padding-top: 10px;
+  font-size: 14px;
+}
+
+.custom-checkbox {
+  margin-left: 20px;
+}
+
+.custom-checkbox {
+  -webkit-appearance: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 8px;
+  border-radius: 2px;
+  display: inline-block;
+  position: relative;
+  top: 6px;
+}
+
+.custom-checkbox:checked {
+  background-color: rgba(17, 97, 237, 1);
+}
+
+.custom-checkbox:checked:after {
+  content: "\2714";
+  font-size: 10px;
+  position: absolute;
+  top: 1px;
+  left: 4px;
+  color: #fff;
+}
+
+.custom-checkbox:focus {
+  outline: none;
+}
+
+label {
+  display: inline-block;
+  padding-top: 10px;
+  padding-left: 5px;
+}
+
+.btnsignin {
+  background-color: #1161ed;
+  color: #fff;
+  width: 100%;
+  padding: 10px 20px;
+  display: block;
+  height: 39px;
+  border-radius: 20px;
+  margin-top: 30px;
+  transition: all 0.5s ease-in-out;
+  border: none;
+  text-transform: uppercase;
+}
+
+.btnforgotsignin {
+  background-color: #1161ed;
+  color: #fff;
+  width: 100%;
+  padding: 10px 20px;
+  display: block;
+  height: 59px;
+  border-radius: 20px;
+  margin-top: 0px;
+  transition: all 0.5s ease-in-out;
+  border: none;
+  text-transform: uppercase;
+}
+
+.btnsignin:hover {
+  background: #4082f5;
+  box-shadow: 0px 4px 35px -5px #4082f5;
+  cursor: pointer;
+}
+.btnsignin:focus {
+  outline: none;
+}
