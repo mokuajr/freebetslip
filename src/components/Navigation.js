@@ -6,7 +6,7 @@ import { FaAlignRight } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 
 const Navigation = () => (
-  <div>
+  <div className="navigatorhead">
     <AuthUserContext.Consumer>
       {(authUser) =>
         authUser ? (
@@ -26,9 +26,9 @@ const NavigationAuth = () => {
   return (
     <div className="header">
       <div className="logo-nav">
-        {/* <div className="logo-container">
-          <h3>Sports-Lay</h3>  
-        </div> */}
+        <div className="logo-container">
+          <h3>FreeBetSlip</h3>
+        </div>
         <div className={click ? "nav-options active" : "nav-options"}>
           <NavLink
             className="option"
@@ -89,6 +89,9 @@ const NavigationNonAuth = () => {
         {/* <div className="logo-container">
           <h3>Sports-Lay</h3>  
         </div> */}
+        <div className="logo-container">
+          <h3>FreeBetSlip</h3>
+        </div>
         <div className={click ? "nav-options active" : "nav-options"}>
           <NavLink
             className="option"

@@ -14,6 +14,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
+   
   },
   heading: {
     fontSize: theme.typography.pxToRem(15),
@@ -35,6 +36,7 @@ const useStyles = makeStyles((theme) => ({
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
           id="panel1a-header"
+           
         >
           <Typography className={classes.heading}>MPESA KENYA</Typography>
         </AccordionSummary>
