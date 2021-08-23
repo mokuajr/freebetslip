@@ -11,7 +11,7 @@ function Landing() {
     <div>
       <div className="free">
         <div className="freetip">
-          <HomeSlider />
+          {/* <HomeSlider /> */}
           <h2> free tips</h2>
           <Freetips />
         </div>

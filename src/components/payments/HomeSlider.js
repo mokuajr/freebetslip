@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "react-dom";
+
 import Slider from "react-animated-slider";
 import "react-animated-slider/build/horizontal.css";
 import "normalize.css/normalize.css";
@@ -36,7 +36,7 @@ const content = [
   }
 ];
 
-const HomeSlider = ({ client }) => (
+const HomeSlider = () => (
   <div>
     <h1> sports subscription plans</h1>
     <Slider className="slider-wrapper" autoplay={1000}>
@@ -49,12 +49,8 @@ const HomeSlider = ({ client }) => (
           <div className="inner">
             <h3>{item.title}</h3>
             <p>{item.description}</p>
-            
-            <PaypalExpressBtn 
-              client={client}
-              currency={"EUR"}
-              total={item.total} 
-            />   
+
+            <PaypalExpressBtn currency={"EUR"} total={item.total} />
           </div>
           <section>
             <span>
