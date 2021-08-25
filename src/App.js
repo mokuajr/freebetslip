@@ -15,7 +15,7 @@ import { withAuthentication } from "./components/Session";
 import Contacts from "./components/pages/Contacts";
 import Navigation from "./components/Navigation";
 import JoinVip from "./components/pages/JoinVip";
- 
+
 // navigator.serviceWorker &&
 // navigator.serviceWorker.register('SW.js').then(function (registration)
 // {
@@ -24,7 +24,6 @@ import JoinVip from "./components/pages/JoinVip";
 const App = () => (
   <Router>
     <Navigation />
-    
 
     <hr />
 
