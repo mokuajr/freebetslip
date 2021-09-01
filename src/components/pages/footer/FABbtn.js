@@ -9,9 +9,10 @@ import {
 import MdAdd from "@material-ui/icons/Add";
 import MdClose from "@material-ui/icons/Clear";
 import MdEdit from "@material-ui/icons/Edit";
-
+import { RWebShare } from "react-web-share";
 import WhatsAppIcon from "@material-ui/icons/WhatsApp";
 import ThumbUpAltIcon from "@material-ui/icons/ThumbUpAlt";
+import ShareIcon from "@material-ui/icons/Share";
 
 const FABbtn = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -52,7 +53,10 @@ const FABbtn = () => {
           target="_blank"
           size={40}
           onClick={(e) => {
-            window.open("https://wa.me/+254790301470", "_blank");
+            window.open(
+              "https://api.whatsapp.com/send/?phone=254790301470 ",
+              "_blank"
+            );
           }}
         />
 
@@ -61,9 +65,24 @@ const FABbtn = () => {
           background="cyan"
           size={40}
           onClick={(e) => {
-            window.open("https://www.sportsvar.com/freebetslip", "_blank");
+            window.open("https://www.sportsvar.com/", "_blank");
           }}
         />
+        <ChildButton
+          icon={<ShareIcon style={{ fontSize: 30 }} />}
+          background="cyan"
+          size={40}
+          onClick={() => console.log("shared successfully!")}
+        >
+          <RWebShare
+            data={{
+              text:
+                "Do you bet? then you have been invited to check our freebetting tips. also check out the one and only sports forum website. www.sportsvar.com",
+              url: "https://www.freebetslip.com",
+              title: "check this best free betting tips webstite "
+            }}
+          />
+        </ChildButton>
       </FloatingMenu>
     </div>
   );

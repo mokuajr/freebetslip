@@ -1,12 +1,30 @@
 import React from "react";
 import "./Payments.css";
 import PaypalExpressBtn from "react-paypal-express-checkout";
+import { db } from "../Firebase/firebase";
 
 function PricingTable() {
+  const onSuccess = () => {
+    console.log("Your payment was succeeded!");
+    var answer = prompt("What is your name?", "Joe Blogg");
+  };
+  const onCancel = () => {
+    // User pressed "cancel" or close Paypal's popup!
+    console.log("You have cancelled the payment!");
+    var onCancel = prompt("What is your name?", "Joe Blogg");
+  };
+  const onError = () => {
+    // The main Paypal's script cannot be loaded or somethings block the loading of that script!
+    console.log("Error!");
+    // Since the Paypal's main script is loaded asynchronously from "https://www.paypalobjects.com/api/checkout.js"
+    // => sometimes it may take about 0.5 second for everything to get set, or for the button to appear
+  };
+
   const client = {
+    production:
+      "AZMZ2VKsqqD1K5Xdl5nRrkJfXm451NeLhFblbXvokhJTSGZ0Ukgd-RO8aUShyqnPDYgWgMvaQ2NBiLt3",
     sandbox:
-      "AXMUBOcaszqCzfEOC-r--Rn7rMVoEbH9c6XbmyKb04nURqcLhpFxWwwnaUytaMR9UTaE2vwLfi5tqKbT",
-    production: "aa"
+      "AfzclcDdiI3iLrcxs7ooZBzQwz3pmQXs0G3S5WvTtYnRTpYOdnlZtudG7fSohWGaiKvQ_q3lKbkjsGDv"
   };
 
   return (
@@ -45,7 +63,18 @@ function PricingTable() {
                 <PaypalExpressBtn
                   client={client}
                   currency={"EUR"}
-                  total={15.0}
+                  total={18.0}
+                  env={"production"}
+                  onError={() => {
+                    alert("oops error occured");
+                  }}
+                  onCancel={() => {
+                    alert("Subscription Cancled");
+                  }}
+                  onSuccess={() => {
+                    alert("Subscription succesful");
+                    // window.prompt("Enter your name: ").then
+                  }}
                 />
               </div>
             </div>
@@ -89,6 +118,17 @@ function PricingTable() {
                   client={client}
                   currency={"EUR"}
                   total={30.0}
+                  env={"production"}
+                  onError={() => {
+                    alert("oops error occured");
+                  }}
+                  onCancel={() => {
+                    alert("Subscription Cancled");
+                  }}
+                  onSuccess={() => {
+                    alert("Subscription succesful");
+                    // window.prompt("Enter your name: ").then
+                  }}
                 />
               </div>
             </div>
@@ -136,6 +176,17 @@ function PricingTable() {
                   client={client}
                   currency={"EUR"}
                   total={100.0}
+                  env={"production"}
+                  onError={() => {
+                    alert("oops error occured");
+                  }}
+                  onCancel={() => {
+                    alert("Subscription Cancled");
+                  }}
+                  onSuccess={() => {
+                    alert("Subscription succesful");
+                    // window.prompt("Enter your name: ").then
+                  }}
                 />
               </div>
             </div>

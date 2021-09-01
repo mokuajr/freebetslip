@@ -5,7 +5,7 @@ const GambleAware = () => {
     <div className="footer">
       <div className="gamble">
         <center className="gamblehead">
-          <p> GambleAware </p>
+          <p> BeGambleAware </p>
         </center>
         <center className="danger">
           <p> 18+</p>

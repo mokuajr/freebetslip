@@ -3,6 +3,7 @@ import "./AdminLayout.css";
 import TabNAvigator from "./TabNavigator";
 // import ClientMessages from "./ClientMessages";
 import Popup from "./Popup";
+import Messages from "./messages/Messages";
 
 const AdminLayout = () => {
   return (
@@ -83,8 +84,9 @@ const AdminLayout = () => {
             </svg>
           </button>
           <button className="profile-btn">
-            <img src="https://cdn5.f-cdn.com/contestentries/419315/17615651/5758567cad64d_thumb900.jpg" 
-            alt=""
+            <img
+              src="https://cdn5.f-cdn.com/contestentries/419315/17615651/5758567cad64d_thumb900.jpg"
+              alt=""
             />
             <span>sportslay</span>
           </button>
@@ -126,7 +128,7 @@ const AdminLayout = () => {
               <path d="M21.21 15.89A10 10 0 118 2.83M22 12A10 10 0 0012 2v10z" />
             </svg>
           </a>
-          <a  className="app-sidebar-link">
+          <a className="app-sidebar-link">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width={24}
@@ -166,10 +168,10 @@ const AdminLayout = () => {
         </div>
 
         <div className="Postbtns">
-        <Popup />
+          <Popup />
           <TabNAvigator />
           <p>Client Messages</p>
-          {/* <ClientMessages /> */}
+          <Messages />
         </div>
       </div>
     </div>
